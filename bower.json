@@ -1,0 +1,28 @@
+{
+  "name": "purescript-zippable",
+  "homepage": "https://github.com/LiamGoodacre/purescript-zippable",
+  "description": "Classes for zippable data structures",
+  "author": "Liam Goodacre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LiamGoodacre/purescript-zippable.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-filterable": "^0.1.2",
+    "purescript-these": "^1.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^1.0.0",
+    "purescript-console": "^1.0.0"
+  }
+}
