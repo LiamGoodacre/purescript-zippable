@@ -6,7 +6,7 @@ module Data.Zippable
   , zip
   ) where
 
-import Control.Category ((<<<), id)
+import Control.Category (id)
 import Data.Filterable (class Filterable, filtered)
 import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple(..))
@@ -30,14 +30,14 @@ zipped :: forall f x y. Zippable f =>
   f x -> f y -> f (These x y)
 zipped = zippedWith id
 
-zipWith :: forall f x y o. (Zippable f, Filterable f) =>
+zipWith :: forall f x y o. Zippable f => Filterable f =>
   (x -> y -> o) -> f x -> f y -> f o
 zipWith f xs ys = filtered (zippedWith applyOnBoth xs ys) where  
   applyOnBoth (This x) = Nothing
   applyOnBoth (That y) = Nothing
   applyOnBoth (Both x y) = Just (f x y)
 
-zip :: forall f x y. (Filterable f, Zippable f) =>
+zip :: forall f x y. Filterable f => Zippable f =>
   f x -> f y -> f (Tuple x y)
 zip = zipWith Tuple
 
