@@ -18,11 +18,11 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-filterable": "^0.1.3",
-    "purescript-these": "^1.0.0"
+    "purescript-filterable": "^2.2.0",
+    "purescript-these": "^3.0.0"
   },
   "devDependencies": {
-    "purescript-assert": "^1.0.0",
-    "purescript-console": "^1.0.0"
+    "purescript-assert": "^3.0.0",
+    "purescript-console": "^3.0.0"
   }
 }
